@@ -1,10 +1,3 @@
-import { Avatar, AvatarImage } from "@/components/ui/avatar";
-import {
-  Card,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import Image from "next/image";
 
 const coaches = [
@@ -17,6 +10,7 @@ const coaches = [
       "Συμμετοχή και διακρίσεις σε πανελλήνια πρωταθλήματα",
     ],
     image: "/kostas.jpeg",
+    role: "Προπονητής",
   },
   {
     name: "Χρήστος Τοκατλίδης",
@@ -27,6 +21,7 @@ const coaches = [
       "Αρχηγός αποστολής το 2004 στην Πολωνία Α16",
     ],
     image: "/christos.jpeg",
+    role: "Προπονητής",
   },
 ];
 
@@ -54,8 +49,39 @@ export default function Home() {
         <div className="bg-white heroImage col-span-2 xl:col-span-1 rounded-r-lg"></div>
       </section>
       {/* Coaches section */}
-      <section className="bg-green-100 p-6 grid grid-cols-4 gap-4">
+      <section className="flex flex-col xl:flex-row items-center justify-around py-40 px-10 gap-16">
         {coaches.map((coach) => (
+          <figure
+            key={coach.name}
+            className="rounded-xl py-10 p-8 max-w-[800px] w-full shadow-2xl"
+          >
+            <Image
+              className="w-24 h-24  rounded-full mx-auto"
+              src={coach.image}
+              alt=""
+              width="384"
+              height="512"
+            />
+            <div className="pt-6  text-center  space-y-4">
+              <blockquote className="space-y-2">
+                {coach.description.map((description) => (
+                  <p className="text-md" key={description}>
+                    {description}
+                  </p>
+                ))}
+              </blockquote>
+              <figcaption className="font-medium">
+                <div className="text-sky-500 dark:text-sky-400">
+                  {coach.name}
+                </div>
+                <div className="text-slate-700 dark:text-slate-500">
+                  {coach.role}
+                </div>
+              </figcaption>
+            </div>
+          </figure>
+        ))}
+        {/* {coaches.map((coach) => (
           <Card className=" col-span-4 md:col-span-2" key={coach.name}>
             <CardHeader>
               <div className="mb-4 flex gap-6 items-center">
@@ -72,10 +98,10 @@ export default function Home() {
             </CardHeader>
           </Card>
           // <div className="col-span-4 md:col-span-2 bg-red-100">{coach}</div>
-        ))}
+        ))} */}
       </section>
       {/* advert */}
-      <section className="mt-10 flex flex-col items-center">
+      <section className="mt-10 flex flex-col items-center bg-gray-50 py-56">
         <h1 className="text-3xl font-bold leading-10">
           Θέλεις να βιώσεις μια μοναδική εμπειρία στα γήπεδα μας
         </h1>
