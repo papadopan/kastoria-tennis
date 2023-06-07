@@ -108,19 +108,19 @@ export default function Home() {
         <h1 className="text-xl  font-bold leading-10">
           Θέλεις να αισθανθείς την απόλυτη ευχαρίστηση του τέννις στην Καστοριά
         </h1>
-        <div className="flex gap-10 w-full max-w-md items-center justify-center p-6 bg-green-200 rounded-lg shadow-lg mt-8  bg-gradient-to-tl rounded-b-xl leading-6 font-semibold text-white from-green-600 to-green-200">
+        <div className="flex gap-10 w-full max-w-md items-center justify-center p-6 bg-green-200 rounded-lg shadow-lg mt-8  bg-gradient-to-tl rounded-b-xl leading-6 font-semibold text-white from-green-600 to-green-700">
           <div className="text-9xl text-green-50">1</div>
           <div className="w-80 text-green-50 text-lg">
             Τμήματα υψηλού αγωνιστικού επιπέδου σε Juniors και Senior
           </div>
         </div>
-        <div className="flex gap-10 w-full max-w-md items-center justify-center p-6 bg-green-200 rounded-lg shadow-lg mt-8  bg-gradient-to-tl rounded-b-xl leading-6 font-semibold text-white from-green-600 to-green-200">
+        <div className="flex gap-10 w-full max-w-md items-center justify-center p-6 bg-green-200 rounded-lg shadow-lg mt-8  bg-gradient-to-tl rounded-b-xl leading-6 font-semibold text-white from-green-600 to-green-700">
           <div className="text-9xl text-green-50">2</div>
           <div className="w-80 text-green-50 text-lg">
             Προαγωνιστικού επιπέδου για αρχάριους
           </div>
         </div>
-        <div className="flex gap-10 w-full max-w-md items-center justify-center p-6 bg-green-200 rounded-lg shadow-lg mt-8  bg-gradient-to-tl rounded-b-xl leading-6 font-semibold text-white from-green-600 to-green-200">
+        <div className="flex gap-10 w-full max-w-md items-center justify-center p-6 bg-green-200 rounded-lg shadow-lg mt-8  bg-gradient-to-tl rounded-b-xl leading-6 font-semibold text-white from-green-600 to-green-700">
           <div className="text-9xl text-green-50">3</div>
           <div className="w-80 text-green-50 text-lg">
             Δυνατότητα για mini-tennis και play and stay
