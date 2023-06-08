@@ -1,9 +1,9 @@
-import { Post } from "@/types";
 import { createClient } from "contentful";
 import Image from "next/image";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { IArticle } from "@/src/@types/contentful";
 
-async function getData({ slug }: { slug: string }): Promise<Post> {
+async function getData({ slug }: { slug: string }): Promise<IArticle> {
   const client = createClient({
     space: process.env.SPACE || "",
     accessToken: process.env.API || "",
@@ -15,6 +15,7 @@ async function getData({ slug }: { slug: string }): Promise<Post> {
       "fields.slug": slug,
     });
     console.log(res.items);
+    // @ts-ignore
     return res.items[0];
   } catch (error) {
     console.log(error);
@@ -32,7 +33,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
           <div className="flex gap-1 items-center">
             <Image
               alt="author image"
-              src={`https:${article.fields.author.fields.image.fields.file.url}`}
+              src={`https:${article.fields.author.fields.image.fields?.file?.url}`}
               width={32}
               height={32}
               className="rounded-full"
@@ -46,9 +47,9 @@ export default async function Page({ params }: { params: { slug: string } }) {
       </div>
       <Image
         alt="article image"
-        src={`https:${article.fields.image.fields.file.url}`}
-        width={article.fields.image.fields.file.details.image.width}
-        height={article.fields.image.fields.file.details.image.height}
+        src={`https:${article.fields.image.fields.file?.url}`}
+        width={200}
+        height={200}
         className="rounded-xl h-96 w-full lg:w-3/5 object-cover"
       />
       <div className="max-w-screen-xl mt-10">
