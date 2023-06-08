@@ -25,6 +25,24 @@ const coaches = [
   },
 ];
 
+const sponsors = [
+  "/sponsors/arxontiko.jpeg",
+  "/sponsors/daydin.png",
+  "/sponsors/dragwnas.jpeg",
+  "/sponsors/era.jpeg",
+  "/sponsors/frateli.jpeg",
+  "/sponsors/genosi.jpeg",
+  "/sponsors/kdap.jpeg",
+  "/sponsors/optika.jpeg",
+  "/sponsors/papia.jpeg",
+  "/sponsors/pico.jpeg",
+  "/sponsors/revel.png",
+  "/sponsors/service.jpeg",
+  "/sponsors/siantsis.jpeg",
+  "/sponsors/soukalopoulos.jpeg",
+  "/sponsors/theaDimitra.jpeg",
+];
+
 export default function Home() {
   return (
     <div>
@@ -125,6 +143,24 @@ export default function Home() {
           <div className="w-80 text-green-50 text-lg">
             Δυνατότητα για mini-tennis και play and stay
           </div>
+        </div>
+      </section>
+      {/* Carousel sponsor image */}
+      <section className="mt-16">
+        <h1 className="text-3xl font-bold leading-10 text-center mb-20">
+          Οι Συνεργάτες μας
+        </h1>
+        <div className="grid grid-cols-4 gap-8 ">
+          {sponsors.map((sponsor) => (
+            <Image
+              key={sponsor}
+              src={sponsor}
+              alt={sponsor}
+              width={400}
+              height={300}
+              className="rounded-lg   aspect-w-16 aspect-h-32 object-cover col-span-2 lg:col-span-1"
+            />
+          ))}
         </div>
       </section>
     </div>
