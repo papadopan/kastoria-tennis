@@ -99,24 +99,6 @@ export default function Home() {
             </div>
           </figure>
         ))}
-        {/* {coaches.map((coach) => (
-          <Card className=" col-span-4 md:col-span-2" key={coach.name}>
-            <CardHeader>
-              <div className="mb-4 flex gap-6 items-center">
-                <Avatar className="w-16 h-16">
-                  <AvatarImage src={coach.image} />
-                </Avatar>
-                <CardTitle>{coach.name}</CardTitle>
-              </div>
-              {coach.description.map((description) => (
-                <CardDescription key={description}>
-                  {description}
-                </CardDescription>
-              ))}
-            </CardHeader>
-          </Card>
-          // <div className="col-span-4 md:col-span-2 bg-red-100">{coach}</div>
-        ))} */}
       </section>
       {/* advert */}
       <section className="mt-10 flex flex-col items-center bg-gray-50 py-56">
