@@ -67,7 +67,7 @@ export default function Home() {
         <div className="bg-white heroImage col-span-2 xl:col-span-1 rounded-r-lg"></div>
       </section>
       {/* Coaches section */}
-      <section className="flex flex-col xl:flex-row items-center justify-around py-40 px-10 gap-16">
+      <section className="flex flex-col xl:flex-row items-center justify-around py-40 md:px-10 gap-16">
         {coaches.map((coach) => (
           <figure
             key={coach.name}
@@ -83,7 +83,7 @@ export default function Home() {
             <div className="pt-6  text-center  space-y-4">
               <blockquote className="space-y-2">
                 {coach.description.map((description) => (
-                  <p className="text-md" key={description}>
+                  <p className="text-sm sm:text-md" key={description}>
                     {description}
                   </p>
                 ))}
@@ -101,28 +101,28 @@ export default function Home() {
         ))}
       </section>
       {/* advert */}
-      <section className="mt-10 flex flex-col items-center bg-gray-50 py-56">
-        <h1 className="text-3xl font-bold leading-10">
+      <section className="mt-10 flex flex-col items-center bg-gray-50 py-10 md-py-56 px-6">
+        <h1 className="text-lg md:text-2xl font-bold leading-10 text-center">
           Θέλεις να βιώσεις μια μοναδική εμπειρία στα γήπεδα μας
         </h1>
-        <h1 className="text-xl  font-bold leading-10">
+        <h1 className="text-md md:text-lg font-bold leading-10 text-center text-gray-500 md:my-6">
           Θέλεις να αισθανθείς την απόλυτη ευχαρίστηση του τέννις στην Καστοριά
         </h1>
         <div className="flex gap-10 w-full max-w-md items-center justify-center p-6 bg-green-200 rounded-lg shadow-lg mt-8  bg-gradient-to-tl rounded-b-xl leading-6 font-semibold text-white from-green-600 to-green-700">
-          <div className="text-9xl text-green-50">1</div>
-          <div className="w-80 text-green-50 text-lg">
+          <div className="text-6xl md:text-9xl text-green-50">1</div>
+          <div className="w-80 text-green-50 text-md">
             Τμήματα υψηλού αγωνιστικού επιπέδου σε Juniors και Senior
           </div>
         </div>
         <div className="flex gap-10 w-full max-w-md items-center justify-center p-6 bg-green-200 rounded-lg shadow-lg mt-8  bg-gradient-to-tl rounded-b-xl leading-6 font-semibold text-white from-green-600 to-green-700">
-          <div className="text-9xl text-green-50">2</div>
-          <div className="w-80 text-green-50 text-lg">
+          <div className="text-6xl md:text-9xl text-green-50">2</div>
+          <div className="w-80 text-green-50 text-md">
             Προαγωνιστικού επιπέδου για αρχάριους
           </div>
         </div>
         <div className="flex gap-10 w-full max-w-md items-center justify-center p-6 bg-green-200 rounded-lg shadow-lg mt-8  bg-gradient-to-tl rounded-b-xl leading-6 font-semibold text-white from-green-600 to-green-700">
-          <div className="text-9xl text-green-50">3</div>
-          <div className="w-80 text-green-50 text-lg">
+          <div className="text-6xl md:text-9xl text-green-50">3</div>
+          <div className="w-80 text-green-50 text-md">
             Δυνατότητα για mini-tennis και play and stay
           </div>
         </div>
@@ -140,7 +140,7 @@ export default function Home() {
               alt={sponsor}
               width={400}
               height={300}
-              className="rounded-lg   aspect-w-16 aspect-h-32 object-cover col-span-2 lg:col-span-1"
+              className="rounded-lg aspect-w-16 aspect-h-32 object-cover col-span-4 sm:col-span-2 lg:col-span-1"
             />
           ))}
         </div>
