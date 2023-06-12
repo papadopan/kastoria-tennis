@@ -49,17 +49,17 @@ export default function Home() {
       {/* Welcome section */}
       <section className="min-h-full bg-gray-100 mb-8 h-[85vh] grid grid-cols-2 rounded-lg">
         <div className="flex items-center justify-center col-span-2 xl:col-span-1">
-          <p className="-ml-6 text-3xl md:text-4xl xl:text-4xl 2xl:text-5xl leading-3 tracking-wide md:tracking-widest font-light transform -rotate-90 ">
+          <p className="text-2xl sm:text-3xl md:text-4xl  2xl:text-5xl font-light transform -rotate-90">
             Κέλετρον
           </p>
-          <div className="-ml-6">
-            <p className="text-3xl md:text-4xl xl:text-4xl 2xl:text-5xl tracking-wide md:tracking-widest leading-loose font-light">
+          <div className="flex flex-col gap-2 md:gap-6">
+            <p className="text-2xl sm:text-3xl md:text-4xl  2xl:text-5xl tracking-wide  leading-loose font-light">
               Όμιλος
             </p>
-            <p className="text-3xl md:text-4xl xl:text-4xl 2xl:text-5xl tracking-wide md:tracking-widest leading-loose font-light">
+            <p className="text-2xl sm:text-3xl md:text-4xl  2xl:text-5xl tracking-wide  leading-loose font-light">
               Αντισφαίρισης
             </p>
-            <p className="text-3xl md:text-4xl xl:text-4xl 2xl:text-5xl tracking-wide md:tracking-widest leading-loose font-light">
+            <p className="text-2xl sm:text-3xl md:text-4xl  2xl:text-5xl tracking-wide  leading-loose font-light">
               Καστοριάς
             </p>
           </div>
