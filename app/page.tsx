@@ -47,7 +47,7 @@ export default function Home() {
   return (
     <div>
       {/* Welcome section */}
-      <section className="min-h-full bg-gray-100 mb-8 h-[85vh] grid grid-cols-2 rounded-lg">
+      <section className="min-h-full bg-gray-100 mb-8 h-[75vh] grid grid-cols-2 rounded-lg">
         <div className="flex items-center justify-center col-span-2 xl:col-span-1">
           <p className="text-2xl sm:text-3xl md:text-4xl  2xl:text-5xl font-light transform -rotate-90">
             Κέλετρον
