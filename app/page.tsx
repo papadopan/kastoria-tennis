@@ -27,20 +27,14 @@ const coaches = [
 
 const sponsors = [
   "/sponsors/arxontiko.jpeg",
-  "/sponsors/daydin.png",
   "/sponsors/dragwnas.jpeg",
   "/sponsors/era.jpeg",
-  "/sponsors/frateli.jpeg",
   "/sponsors/genosi.jpeg",
-  "/sponsors/kdap.jpeg",
   "/sponsors/optika.jpeg",
   "/sponsors/papia.jpeg",
-  "/sponsors/pico.jpeg",
   "/sponsors/revel.png",
   "/sponsors/service.jpeg",
-  "/sponsors/siantsis.jpeg",
   "/sponsors/soukalopoulos.jpeg",
-  "/sponsors/theaDimitra.jpeg",
 ];
 
 export default function Home() {
