@@ -2,8 +2,8 @@ import { createClient } from "contentful";
 import Image from "next/image";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { IArticle } from "@/src/@types/contentful";
-import { BLOCKS, MARKS, INLINES } from '@contentful/rich-text-types';
-
+import { BLOCKS, MARKS, INLINES } from "@contentful/rich-text-types";
+import { ReactNode } from "react";
 
 async function getData({ slug }: { slug: string }): Promise<IArticle> {
   const client = createClient({
@@ -26,20 +26,27 @@ async function getData({ slug }: { slug: string }): Promise<IArticle> {
 
 const options = {
   renderNode: {
-    [BLOCKS.PARAGRAPH]: (node, children) => {
-      return <p>{children}</p>
+    [INLINES.HYPERLINK]: (node: {
+      data: { uri: string };
+      content: { value: string }[];
+    }) => {
+      return (
+        <a
+          href={node.data.uri}
+          className={
+            "font-medium text-blue-600 dark:text-blue-500 hover:underline"
+          }
+        >
+          {node.content[0].value}
+        </a>
+      );
     },
-    [INLINES.HYPERLINK]:(node) =>{
-      return <a href={node.data.uri} className={"font-medium text-blue-600 dark:text-blue-500 hover:underline"}>{node.content[0].value}</a>
-    }
   },
-  renderMark:{
-    [MARKS.BOLD]: (text) => <span className={"font-bold"}>{text}</span>,
-    [MARKS.ITALIC]: (text) => <span className={"italic"}>{text}</span>
-  }
+  renderMark: {
+    [MARKS.BOLD]: (text: string) => <span className={"font-bold"}>{text}</span>,
+    [MARKS.ITALIC]: (text: string) => <span className={"italic"}>{text}</span>,
+  },
 };
-
-
 
 export default async function Page({ params }: { params: { slug: string } }) {
   const article = await getData(params);
@@ -47,15 +54,17 @@ export default async function Page({ params }: { params: { slug: string } }) {
   return (
     <div className="mx-auto w-full flex flex-col gap-6 items-center">
       <div className="mb-5 flex flex-col items-center">
-        <h1 className="text-2xl md:text-4xl mb-5 text-center">{article.fields.title}</h1>
+        <h1 className="text-2xl md:text-4xl mb-5 text-center">
+          {article.fields.title}
+        </h1>
         <div className="flex flex-col  md:flex-row gap-6 items-center">
           <div className="flex gap-1 items-center ">
             <Image
-                alt="author image"
-                src={`https:${article.fields.author.fields.image.fields?.file?.url}`}
-                width={32}
-                height={32}
-                className="rounded-full"
+              alt="author image"
+              src={`https:${article.fields.author.fields.image.fields?.file?.url}`}
+              width={32}
+              height={32}
+              className="rounded-full"
             />
             <p>{article.fields.author.fields.name}</p>
           </div>
