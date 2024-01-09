@@ -5,8 +5,8 @@ import Link from "next/link";
 
 async function getData(): Promise<IArticle[]> {
   const client = createClient({
-    space: process.env.SPACE || "",
-    accessToken: process.env.API || "",
+    space: process.env.CONTENTFUL_SPACE_ID || "",
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || "",
   });
 
   try {
