@@ -17,9 +17,9 @@ export const Header = () => {
           <Link href="/">
             <li>Αρχική</li>
           </Link>
-          {/* <Link href="/posts">
+          <Link href="/posts">
             <li>Ανακοινώσεις</li>
-          </Link> */}
+          </Link>
         </ul>
       </nav>
     </header>
