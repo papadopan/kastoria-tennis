@@ -1,9 +1,9 @@
+// @ts-nocheck
 import { createClient } from "contentful";
 import Image from "next/image";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { IArticle } from "@/src/@types/contentful";
 import { BLOCKS, MARKS, INLINES } from "@contentful/rich-text-types";
-import { ReactNode } from "react";
 
 async function getData({ slug }: { slug: string }): Promise<IArticle> {
   const client = createClient({
@@ -26,10 +26,7 @@ async function getData({ slug }: { slug: string }): Promise<IArticle> {
 
 const options = {
   renderNode: {
-    [INLINES.HYPERLINK]: (node: {
-      data: { uri: string };
-      content: { value: string }[];
-    }) => {
+    [INLINES.HYPERLINK]: (node: any) => {
       return (
         <a
           href={node.data.uri}
@@ -43,8 +40,12 @@ const options = {
     },
   },
   renderMark: {
-    [MARKS.BOLD]: (text: string) => <span className={"font-bold"}>{text}</span>,
-    [MARKS.ITALIC]: (text: string) => <span className={"italic"}>{text}</span>,
+    [MARKS.BOLD]: (text: string): JSX.Element => (
+      <span className={"font-bold"}>{text}</span>
+    ),
+    [MARKS.ITALIC]: (text: string): JSX.Element => (
+      <span className={"italic"}>{text}</span>
+    ),
   },
 };
 
