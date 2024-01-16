@@ -20,8 +20,10 @@ export default function RootLayout({
     <html lang="el">
       <body className={inter.className}>
         <Header />
-        <main className="min-h-[90vh] p-6 md:p-10">{children}</main>
-        <Analytics />
+        <main className="min-h-[90vh] p-6 md:p-10">
+          {children}
+          <Analytics />
+        </main>
         <Footer />
       </body>
     </html>
