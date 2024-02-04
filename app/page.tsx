@@ -41,24 +41,24 @@ export default function Home() {
   return (
     <div>
       {/* Welcome section */}
-      <section className="min-h-full bg-gray-100 mb-8 h-[75vh] grid grid-cols-2 rounded-lg">
-        <div className="flex items-center justify-center col-span-2 xl:col-span-1">
-          <p className="text-2xl sm:text-3xl md:text-4xl  2xl:text-5xl font-light transform -rotate-90">
+      <section className="min-h-full bg-gray-100 mb-8 h-[75vh] flex flex-col sm:flex-row rounded-lg">
+        <div className="flex items-center justify-center flex-1">
+          <p className="text-2xl sm:text-2xl lg:text-2xl  2xl:text-5xl font-light transform -rotate-90">
             Κέλετρον
           </p>
           <div className="flex flex-col gap-2 md:gap-6">
-            <p className="text-2xl sm:text-3xl md:text-4xl  2xl:text-5xl tracking-wide  leading-loose font-light">
+            <p className="text-2xl sm:text-2xl lg:text-2xl  2xl:text-5xl tracking-wide  leading-loose font-light">
               Όμιλος
             </p>
-            <p className="text-2xl sm:text-3xl md:text-4xl  2xl:text-5xl tracking-wide  leading-loose font-light">
+            <p className="text-2xl sm:text-2xl lg:text-42xl  2xl:text-5xl tracking-wide  leading-loose font-light">
               Αντισφαίρισης
             </p>
-            <p className="text-2xl sm:text-3xl md:text-4xl  2xl:text-5xl tracking-wide  leading-loose font-light">
+            <p className="text-2xl sm:text-2xl lg:text-2xl  2xl:text-5xl tracking-wide  leading-loose font-light">
               Καστοριάς
             </p>
           </div>
         </div>
-        <div className="bg-white heroImage col-span-2 xl:col-span-1 rounded-r-lg"></div>
+        <div className="bg-white heroImage rounded-none rounded-b-lg sm:rounded-bl-none sm:rounded-r-lg flex-2 sm:flex-1"></div>
       </section>
       {/* Coaches section */}
       <section className="flex flex-col xl:flex-row items-center justify-around py-40 md:px-10 gap-16">
