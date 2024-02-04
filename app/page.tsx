@@ -42,7 +42,7 @@ export default function Home() {
     <div>
       {/* Welcome section */}
       <section className="min-h-full bg-gray-100 mb-8 h-[75vh] flex flex-col sm:flex-row rounded-lg">
-        <div className="flex items-center justify-center flex-1">
+        <div className="flex items-center justify-center flex-1 p-2">
           <p className="text-2xl sm:text-2xl lg:text-2xl  2xl:text-5xl font-light transform -rotate-90">
             Κέλετρον
           </p>
@@ -58,7 +58,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="bg-white heroImage rounded-none rounded-b-lg sm:rounded-bl-none sm:rounded-r-lg flex-2 sm:flex-1"></div>
+        <div className="bg-white heroImage rounded-none rounded-b-lg sm:rounded-bl-none sm:rounded-r-lg flex-2"></div>
       </section>
       {/* Coaches section */}
       <section className="flex flex-col xl:flex-row items-center justify-around py-40 md:px-10 gap-16">
