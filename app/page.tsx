@@ -122,7 +122,7 @@ export default function Home() {
         </div>
       </section>
       {/* Carousel sponsor image */}
-      <section className="mt-16">
+      <section className="mt-16 max-w-[2300px] w-full m-auto">
         <h1 className="text-3xl font-bold leading-10 text-center mb-20">
           Οι Συνεργάτες μας
         </h1>
